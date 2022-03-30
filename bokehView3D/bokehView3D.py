@@ -6,14 +6,18 @@ from bokeh.plotting import figure, show
 from bokeh.models import ColumnDataSource, GlyphRenderer, Range1d
 from bokeh.io import push_notebook, output_notebook
 import ipywidgets
-from IPython.display import display
+from IPython.display import display, Markdown
 import numpy as np
 
 
 class bokehView3D:
 
     def __init__(self):
-        output_notebook()
+
+        display(Markdown('**Run the following command before loading viewer**'))
+        display(Markdown('`from bokeh.io import output_notebook`'))
+        display(Markdown('`output_notebook()`'))
+        # output_notebook()
 
     def imshow3d(self, img, axis=0, plot_size=1, img_res=(1, 1, 1)):
 
